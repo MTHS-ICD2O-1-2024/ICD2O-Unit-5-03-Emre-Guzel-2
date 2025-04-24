@@ -8,13 +8,17 @@
 "use strict"
 
 function pgNumberCalculator() {
-  // Setting the veribals
-  const age = document.getElementById("age").value
-  
-  if (age>=17){
-    document.getElementById("result") + age + "you can watch R-rated movies  "
+  // Setting the variables
+  const age = parseInt(document.getElementById("age").value)
+
+  let message = ""
+
+  if (age >= 17) {
+    message = " You can watch R-rated and PG-13 movies alone."
+  } else if (age >= 13) {
+    message = " You can watch PG-13 movies alone."
+  } else {
+    message = " Uh, you're too young for most things."
   }
-  else if (age>=17) {
-    document.getElementById("result") + age + "You can watch a g or pg movie"
-  }
+  document.getElementById("result").textContent = message;
 }
