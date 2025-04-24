@@ -7,17 +7,14 @@
 
 "use strict"
 
-function randomNumberGenerator() {
+function pgNumberCalculator() {
   // Setting the veribals
-  const positiveNumber = document.getElementById("positive-number").checked
-  let randomNumber
-
-  // Setting the the if and else statment 
-  if (positiveNumber) {
-    randomNumber = Math.floor(Math.random() * 6) + 1 // 1 to 6
-  } else {
-    randomNumber = -1 * (Math.floor(Math.random() * 6) + 1); // -1 to -6
+  const age = document.getElementById("age").value
+  
+  if (age>=17){
+    document.getElementById("result") + age + "you can watch R-rated movies  "
   }
-  document.getElementById("result").innerHTML =
-    "<p>The random number is: " + randomNumber + "</p>"
+  else if (age>=17) {
+    document.getElementById("result") + age + "You can watch a g or pg movie"
+  }
 }
