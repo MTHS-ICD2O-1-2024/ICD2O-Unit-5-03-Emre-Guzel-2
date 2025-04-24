@@ -17,7 +17,9 @@ function pgNumberCalculator() {
     message = " You can watch R-rated movie alone."
   } else if (age >= 13) {
     message = " You can watch PG-13 movie alone."
-  } else {
+  }else if (age >= 5) {
+    message = " You can watch G or PG movie alone."
+  }else {
     message = " Uh, you're too young for most things."
   }
   document.getElementById("result").textContent = message;
